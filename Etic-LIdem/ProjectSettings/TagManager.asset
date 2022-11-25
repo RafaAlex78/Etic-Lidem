@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Right Hand
   - Left Hand
+  - Pills
   layers:
   - Default
   - TransparentFX
