@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6900161}
+  - component: {fileID: 6900162}
   m_Layer: 0
   m_Name: ===SwitchPuzzles===
   m_TagString: Untagged
@@ -156,6 +157,21 @@ Transform:
   m_Father: {fileID: 750601499}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6900162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6900160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c9bb0592751974bad4cc58fb34486e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  complete: 0
+  switches: 0000000000
+  solution: 0100010100
 --- !u!1 &7285388
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,7 +636,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: {fileID: 0}
+  switchPuzzle: {fileID: 6900162}
   z: 0
+  value: 4
 --- !u!59 &88671770
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -2639,9 +2657,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1271664485}
-  - {fileID: 539016732}
   - {fileID: 694228772}
+  - {fileID: 539016732}
+  - {fileID: 1271664485}
   - {fileID: 515064943}
   - {fileID: 88671768}
   - {fileID: 293290846}
@@ -3315,7 +3333,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: {fileID: 0}
+  switchPuzzle: {fileID: 6900162}
   z: 0
+  value: 3
 --- !u!59 &515064945
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -3798,7 +3818,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: {fileID: 0}
+  switchPuzzle: {fileID: 6900162}
   z: 0
+  value: 1
 --- !u!59 &539016734
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -4868,7 +4890,7 @@ GameObject:
   - component: {fileID: 694228773}
   - component: {fileID: 694228779}
   m_Layer: 0
-  m_Name: Switch 3
+  m_Name: Switch 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4887,7 +4909,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 370761807}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &694228773
 MonoBehaviour:
@@ -4902,7 +4924,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: {fileID: 0}
+  switchPuzzle: {fileID: 6900162}
   z: 0
+  value: 0
 --- !u!59 &694228774
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -8136,7 +8160,7 @@ GameObject:
   - component: {fileID: 1271664491}
   - component: {fileID: 1271664492}
   m_Layer: 0
-  m_Name: Switch 1
+  m_Name: Switch 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8155,7 +8179,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 370761807}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!59 &1271664486
 HingeJoint:
@@ -8285,7 +8309,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: {fileID: 0}
+  switchPuzzle: {fileID: 6900162}
   z: 0
+  value: 2
 --- !u!114 &1271664492
 MonoBehaviour:
   m_ObjectHideFlags: 0
