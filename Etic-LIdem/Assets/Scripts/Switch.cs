@@ -5,7 +5,9 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     [SerializeField] private Transform rotation;
+    [SerializeField] private SwitchPuzzle switchPuzzle;
     [SerializeField] private float z;
+    [SerializeField] private int value;
     private float timer;
     private bool isOn;
 
@@ -16,21 +18,30 @@ public class Switch : MonoBehaviour
 
     private void Update()
     {
-        timer += Time.deltaTime;
-        
-        if (timer > 0.15f)
+        if (switchPuzzle.Complete)
         {
-            timer = 0;
-            z = rotation.rotation.z;
-            if (rotation.rotation.z > 0.4 && !isOn)
+            this.GetComponent<BoxCollider>().enabled = false;
+        }
+        else
+        {
+            timer += Time.deltaTime;
+            
+            if (timer > 0.15f)
             {
-                isOn = true;
-                Debug.Log(this.name + " on");
-            }
-            if (rotation.rotation.z < -0.4 && isOn)
-            {
-                isOn = false;
-                Debug.Log(this.name + " off");
+                timer = 0;
+                z = rotation.rotation.z;
+                if (rotation.rotation.z > 0.4 && !isOn)
+                {
+                    isOn = true;
+                    Debug.Log(this.name + " on");
+                    switchPuzzle.SwitchOn(value);
+                }
+                if (rotation.rotation.z < -0.4 && isOn)
+                {
+                    isOn = false;
+                    Debug.Log(this.name + " off");
+                    switchPuzzle.SwitchOff(value);
+                }
             }
         }
     }
