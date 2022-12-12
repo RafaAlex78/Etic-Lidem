@@ -4134,7 +4134,7 @@ GameObject:
   - component: {fileID: 539016734}
   - component: {fileID: 539016733}
   - component: {fileID: 539016739}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Switch 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5240,7 +5240,7 @@ GameObject:
   - component: {fileID: 694228774}
   - component: {fileID: 694228773}
   - component: {fileID: 694228779}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Switch 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13524,7 +13524,7 @@ GameObject:
   - component: {fileID: 1998487568}
   - component: {fileID: 1998487573}
   - component: {fileID: 1998487572}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
