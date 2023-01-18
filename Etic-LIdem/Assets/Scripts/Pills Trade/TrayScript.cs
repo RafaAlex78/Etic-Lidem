@@ -6,12 +6,16 @@ public class TrayScript : MonoBehaviour
 {
     [SerializeField] int _currentPills;
     [SerializeField] int _neededPills;
+    [SerializeField] private GameObject[] toGive;
 
     private void CheckPills()
     {
         if(_currentPills==_neededPills)
         {
-            Debug.Log("give reward");
+            for (int i = 0; i < toGive.Length; i++)
+            {
+                toGive[i].SetActive(true);
+            }
         }
     }
     private void OnTriggerEnter(Collider other)

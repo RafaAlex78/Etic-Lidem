@@ -21,22 +21,22 @@ public class Switch : MonoBehaviour
         if (switchPuzzle.Complete)
         {
             this.GetComponent<BoxCollider>().enabled = false;
+            this.enabled = false;
         }
         else
         {
             timer += Time.deltaTime;
             
-            if (timer > 0.15f)
+            if (timer > 0.2f)
             {
                 timer = 0;
-                z = rotation.rotation.z;
-                if (rotation.rotation.z > 0.4 && !isOn)
+                if (rotation.rotation.x < 0.15 && !isOn)
                 {
                     isOn = true;
                     Debug.Log(this.name + " on");
                     switchPuzzle.SwitchOn(value);
                 }
-                if (rotation.rotation.z < -0.4 && isOn)
+                if (rotation.rotation.x > 0.35 && isOn)
                 {
                     isOn = false;
                     Debug.Log(this.name + " off");
@@ -44,5 +44,6 @@ public class Switch : MonoBehaviour
                 }
             }
         }
+        //Debug.Log(rotation.rotation.x);
     }
 }
