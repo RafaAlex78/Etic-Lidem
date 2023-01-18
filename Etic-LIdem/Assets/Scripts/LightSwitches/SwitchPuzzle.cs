@@ -8,6 +8,8 @@ public class SwitchPuzzle : MonoBehaviour
     [SerializeField] private bool complete;
     [SerializeField] private bool[] switches;
     [SerializeField] private bool[] solution;
+    [SerializeField] private GameObject[] lights;
+    [SerializeField] private GameObject emergencyLight;
     public bool Complete { get => complete; }
 
     public void SwitchOn(int value)
@@ -32,11 +34,15 @@ public class SwitchPuzzle : MonoBehaviour
             }
             else
             {
-                Debug.Log("Wrong");
                 return;
             }
         }
-        Debug.Log("Correct");
+
+        foreach (GameObject i in lights)
+        {
+            i.SetActive(true);
+        }
+        emergencyLight.SetActive(false);
         complete = true;
     }
 }
