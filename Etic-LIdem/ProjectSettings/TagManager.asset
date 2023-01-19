@@ -13,6 +13,7 @@ TagManager:
   - FinalKey1
   - FinalKey2
   - FinalKey3
+  - Toy
   layers:
   - Default
   - TransparentFX
