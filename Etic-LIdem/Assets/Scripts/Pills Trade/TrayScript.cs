@@ -27,13 +27,4 @@ public class TrayScript : MonoBehaviour
             CheckPills();
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Pills"))
-        {
-            Debug.Log("-1");
-            _currentPills--;
-        }
-    }
-
 }
