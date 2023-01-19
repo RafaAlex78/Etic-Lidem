@@ -5,32 +5,40 @@ using UnityEngine;
 
 public class KeyHole : MonoBehaviour
 {
-    [SerializeField] private GameObject handle;
-    [SerializeField] private GameObject key;
-    [SerializeField] private GameObject block;
+    [SerializeField] private GameObject[] key;
     [SerializeField] private FinalPuzzle final;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Key")
+        Debug.Log("Colided");
+        if (other.gameObject.CompareTag("FinalKey1"))
         {
             other.gameObject.SetActive(false);
-            if (key != null)
-            {
-                key.SetActive(true);
-            }
-            if (handle != null)
-            {
-                handle.SetActive(true);
-            }
-            if (block != null)
-            {
-                block.SetActive(false);
-            }
-            if (final != null)
-            {
-                final.InsertKey();
-            }
+            key[0].SetActive(true);
+
+            AddKey();
+        }
+        if (other.gameObject.CompareTag("FinalKey2"))
+        {
+            other.gameObject.SetActive(false);
+            key[1].SetActive(true);
+
+            AddKey();
+        }
+        if (other.gameObject.CompareTag("FinalKey3"))
+        {
+            other.gameObject.SetActive(false);
+            key[2].SetActive(true);
+
+            AddKey();
+        }
+    }
+
+    private void AddKey()
+    {
+        if (final != null)
+        {
+            final.InsertKey();
         }
     }
 }

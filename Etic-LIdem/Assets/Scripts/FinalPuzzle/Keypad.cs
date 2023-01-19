@@ -50,7 +50,7 @@ public class Keypad : MonoBehaviour
             inputs[1] = inputs[0];
             inputs[0] = value;
 
-            solutionCheck = inputs[0].ToString() + inputs[1].ToString() + inputs[2].ToString();
+            solutionCheck = inputs[2].ToString() + inputs[1].ToString() + inputs[0].ToString();
 
             DisplayText();
 
@@ -76,7 +76,7 @@ public class Keypad : MonoBehaviour
             {
                 inputs[i] = 0;
             }
-            solutionCheck = inputs[0].ToString() + inputs[1].ToString() + inputs[2].ToString();
+            solutionCheck = inputs[2].ToString() + inputs[1].ToString() + inputs[0].ToString();
             DisplayText();
         }
     }
