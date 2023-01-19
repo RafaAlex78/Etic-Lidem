@@ -10,6 +10,9 @@ TagManager:
   - Key
   - DrawerKey
   - Elevator
+  - FinalKey1
+  - FinalKey2
+  - FinalKey3
   layers:
   - Default
   - TransparentFX
@@ -27,8 +30,8 @@ TagManager:
   - Infirmary
   - Control Room
   - ObjectnoLight
-  - 
-  - 
+  - KeyPad
+  - KeyHole
   - 
   - 
   - 
