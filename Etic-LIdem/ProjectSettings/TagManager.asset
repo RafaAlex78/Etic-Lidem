@@ -34,7 +34,7 @@ TagManager:
   - KeyPad
   - KeyHole
   - KeyPadButtons
-  - 
+  - Collides with Player
   - 
   - 
   - 
