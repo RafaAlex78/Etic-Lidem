@@ -20,6 +20,7 @@ public class UnlockDrawer : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.None;
             key.SetActive(true);
+            other.gameObject.SetActive(false);
         }
     }
 }
