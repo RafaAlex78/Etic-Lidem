@@ -7,6 +7,12 @@ public class toysBox : MonoBehaviour
     [SerializeField] List<GameObject> _toys;
     [SerializeField] int _toysStored = 0;
     [SerializeField] GameObject _lockedDoor;
+    [SerializeField] private GameManager _gameManager;
+
+    private void Start()
+    {
+        _gameManager = GameManager.instance;
+    }
 
     private void Update()
     {
@@ -16,6 +22,7 @@ public class toysBox : MonoBehaviour
             // open door
             // disable script
             this.enabled = false;
+            _gameManager.ExitPlayRoom();
            
         }
     }
