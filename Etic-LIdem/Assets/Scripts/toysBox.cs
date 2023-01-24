@@ -16,7 +16,8 @@ public class toysBox : MonoBehaviour
 
     private void Update()
     {
-        if(_toys.Count == _toysStored)
+        //the -1 is there cause one of the toys has 2 hitboxes and it counts as 2 toys
+        if(_toys.Count == _toysStored - 1)
         {
             Debug.Log("Door Open");
             // open door
