@@ -9,21 +9,33 @@ public class Grab_Restrictor : MonoBehaviour
 
     public void DisableRightRay()
     {
-        rightHandRay.SetActive(false);
+        if (rightHandRay.activeInHierarchy != false)
+        {
+            rightHandRay.SetActive(false);
+        }
     }
 
     public void DisableLeftRay()
     {
-        leftHandRay.SetActive(false);
+        if (leftHandRay.activeInHierarchy != false)
+        {
+            leftHandRay.SetActive(false);
+        }
     }
 
     public void EnableRightRay()
     {
-        rightHandRay.SetActive(true);
+        if (rightHandRay.activeInHierarchy != true)
+        {
+            rightHandRay.SetActive(true);
+        }
     }
 
     public void EnableLeftRay()
     {
-        leftHandRay.SetActive(true);
+        if (leftHandRay.activeInHierarchy != true)
+        {
+            leftHandRay.SetActive(true);
+        }
     }
 }

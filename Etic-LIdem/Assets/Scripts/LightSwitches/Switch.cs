@@ -6,18 +6,21 @@ public class Switch : MonoBehaviour
 {
     [SerializeField] private Transform rotation;
     [SerializeField] private SwitchPuzzle switchPuzzle;
-    [SerializeField] private float z;
     [SerializeField] private int value;
     private float timer;
     private bool isOn;
+    private Vector3 startPos;
 
     private void Start()
     {
         rotation = this.transform;
+        startPos = this.transform.position;
     }
 
     private void Update()
     {
+        transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 90, 0);
+        transform.position = startPos;
         if (switchPuzzle.Complete)
         {
             this.GetComponent<BoxCollider>().enabled = false;
