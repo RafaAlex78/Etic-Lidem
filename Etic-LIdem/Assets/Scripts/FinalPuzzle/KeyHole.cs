@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Transactions.Configuration;
 using UnityEngine;
 
 public class KeyHole : MonoBehaviour
@@ -13,24 +12,33 @@ public class KeyHole : MonoBehaviour
         Debug.Log("Colided");
         if (other.gameObject.CompareTag("FinalKey1"))
         {
-            other.gameObject.SetActive(false);
-            key[0].SetActive(true);
+            if (key[0].activeInHierarchy == false)
+            {
+                other.gameObject.SetActive(false);
+                key[0].SetActive(true);
 
-            AddKey();
+                AddKey();
+            }
         }
         if (other.gameObject.CompareTag("FinalKey2"))
         {
-            other.gameObject.SetActive(false);
-            key[1].SetActive(true);
+            if (key[1].activeInHierarchy == false)
+            {
+                other.gameObject.SetActive(false);
+                key[1].SetActive(true);
 
-            AddKey();
+                AddKey();
+            }
         }
         if (other.gameObject.CompareTag("FinalKey3"))
         {
-            other.gameObject.SetActive(false);
-            key[2].SetActive(true);
+            if (key[2].activeInHierarchy == false)
+            {
+                other.gameObject.SetActive(false);
+                key[2].SetActive(true);
 
-            AddKey();
+                AddKey();
+            }
         }
     }
 
