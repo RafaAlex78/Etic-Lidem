@@ -7,6 +7,7 @@ public class SwitchPuzzle : MonoBehaviour
 {
     [SerializeField] private bool complete;
     [SerializeField] private bool[] switches;
+    [SerializeField] private Switch[] switchesScripts;
     [SerializeField] private bool[] solution;
     [SerializeField] private GameObject[] lights;
     [SerializeField] private GameObject emergencyLight;
@@ -22,6 +23,15 @@ public class SwitchPuzzle : MonoBehaviour
     {
         switches[value] = false;
         CheckResult();
+    }
+    public void ResetAllSwitch()
+    {
+        for (int i = 0; i < switchesScripts.Length; i++)
+        {
+         
+            switchesScripts[i].transform.localEulerAngles = new Vector3(0, 0, -0);
+            switchesScripts[i].Moves = 0;
+        }
     }
 
     private void CheckResult()
