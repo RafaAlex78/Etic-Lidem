@@ -8,22 +8,19 @@ public class UnlockDrawer : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject key;
-    [SerializeField] private Animator animator;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        rb = this.GetComponent<Rigidbody>();
     }
-
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "DrawerKey")
         {
+            rb.constraints = RigidbodyConstraints.None;
             key.SetActive(true);
             other.gameObject.SetActive(false);
-            animator.SetTrigger("Open");
-            
         }
     }
 }
