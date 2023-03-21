@@ -11,6 +11,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] lightsCorridor1;
     [SerializeField] private GameObject[] lightsCorridor2;
     [SerializeField] private GameObject[] lightsCorridor3;
+    [Header("Audio")]
+    [SerializeField] private AudioSource doorAudioSource1;
+    [SerializeField] private AudioSource doorAudioSource2;
+    [SerializeField] private AudioSource doorSlamAudioSource;
+    [SerializeField] private AudioSource lightsOffAudioSource;
+    [SerializeField] private AudioSource lightsOnAudioSource;
 
     private void Awake()
     {
@@ -36,6 +42,7 @@ public class GameManager : MonoBehaviour
     public void ExitPlayRoom()
     {
         playroomAnim.SetTrigger("Change");
+        doorAudioSource1.PlayOneShot(doorAudioSource1.clip);
     }
 
     public void PickedPlushiePart()
@@ -61,19 +68,19 @@ public class GameManager : MonoBehaviour
     IEnumerator LightSequence2()
     {
         yield return new WaitForSeconds(2);
-        //play light turn off Sound
+        lightsOffAudioSource.PlayOneShot(lightsOffAudioSource.clip);
         for (int i = 0; i < lightsCorridor2.Length; i++)
         {
             lightsCorridor2[i].SetActive(false);
         }
         yield return new WaitForSeconds(1);
-        //play light turn on Sound
+        lightsOnAudioSource.PlayOneShot(lightsOnAudioSource.clip);
         for (int i = 0; i < lightsCorridor1.Length; i++)
         {
             lightsCorridor1[i].SetActive(true);
         }
         yield return new WaitForSeconds(1);
-        //Play Door opening sound
+        doorAudioSource2.PlayOneShot(doorAudioSource2.clip);
         infirmaryAnim.SetTrigger("Change");
     }
 
@@ -82,8 +89,9 @@ public class GameManager : MonoBehaviour
     //Do we trigger the door closing after the player turns on the lights or after they enter the infirmary?
     public void EnteredInfirmary()
     {
-        //Play Door shutting sound
         infirmaryAnim.SetTrigger("Change");
         playroomAnim.SetTrigger("Change");
+        //Play Door shutting sound
+        doorSlamAudioSource.PlayOneShot(doorSlamAudioSource.clip);
     }
 }
