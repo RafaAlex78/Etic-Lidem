@@ -51,7 +51,9 @@ public class SwitchPuzzle : MonoBehaviour
         foreach (GameObject i in lights)
         {
             i.SetActive(true);
+            
         }
+        //ligar a luz
         emergencyLight.SetActive(false);
         complete = true;
     }
