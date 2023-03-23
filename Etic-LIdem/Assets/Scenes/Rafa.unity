@@ -450,6 +450,7 @@ MonoBehaviour:
   _possiblePlaces:
   - {fileID: 1020233936}
   - {fileID: 195568694}
+  _numberObjectPlaced: 0
 --- !u!4 &311341341
 Transform:
   m_ObjectHideFlags: 0
@@ -514,6 +515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentPills: 0
   _neededPills: 1
+  toGive: []
 --- !u!65 &316353507
 BoxCollider:
   m_ObjectHideFlags: 0

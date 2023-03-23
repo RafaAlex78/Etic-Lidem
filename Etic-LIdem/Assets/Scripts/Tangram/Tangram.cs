@@ -7,11 +7,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Tangram : MonoBehaviour
 {
     [SerializeField] List<GameObject> _possiblePlaces;
-    int _numberObjectPlaced=0;
+   [SerializeField] int _numberObjectPlaced=0;
 
     public void ADDPieces()
     {
         _numberObjectPlaced++;
+
         CheckCompletation();        
     }
     public void RemovePieces()
@@ -28,7 +29,6 @@ public class Tangram : MonoBehaviour
             {
                 XRSocketInteractor socket = _possiblePlaces[i].GetComponent<XRSocketInteractor>();
                 GameObject piece = _possiblePlaces[i].GetComponent<XRSocketInteractor>().GetOldestInteractableSelected().transform.gameObject;
-
                 Debug.Log(piece);
 
                if(_possiblePlaces[i].GetComponent<TangramPlace>().RightTangramPiece == piece)
