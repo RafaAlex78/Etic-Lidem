@@ -11,26 +11,26 @@ public class tunel : MonoBehaviour
     [SerializeField] Vector3 _smallRoomPos;
     [SerializeField] Vector3 _bigRoomPos;
 
-    [SerializeField] bool _onTheBigRoom;
 
-
-    private void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        if(other.CompareTag("Player"))
+    //    _mapToScale.transform.localScale = _bigRoomScale;
+    //    _mapToScale.transform.position = _bigRoomPos;
+    }
+    public void ChangeRoom(bool isInBigRoom)
+    {
+        if (isInBigRoom)
         {
-            if(_onTheBigRoom)
-            {
-                _mapToScale.transform.localScale = _smallRoomScale;
-                _mapToScale.transform.position = _smallRoomPos;
-                _onTheBigRoom = false;
+            _mapToScale.transform.localScale = _smallRoomScale;
+            _mapToScale.transform.position = _smallRoomPos;
+            
 
-            }
-            else
-            {
-                _mapToScale.transform.localScale = _bigRoomScale;
-                _mapToScale.transform.position = _bigRoomPos;
-                _onTheBigRoom = true;
-            }
+        }
+        else
+        {
+            _mapToScale.transform.localScale = _bigRoomScale;
+            _mapToScale.transform.position = _bigRoomPos;
         }
     }
+   
 }
