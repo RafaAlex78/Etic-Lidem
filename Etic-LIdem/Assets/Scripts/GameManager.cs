@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] lightsCorridor1;
     [SerializeField] private GameObject[] lightsCorridor2;
     [SerializeField] private GameObject[] lightsCorridor3;
+    [SerializeField] private tunel tunelScript;
     [Header("Audio")]
     [SerializeField] private AudioSource doorAudioSource1;
     [SerializeField] private AudioSource doorAudioSource2;
@@ -38,7 +39,7 @@ public class GameManager : MonoBehaviour
         Debug.Log(rb);
 
     }
-
+   
     public void ExitPlayRoom()
     {
         playroomAnim.SetTrigger("Change");
