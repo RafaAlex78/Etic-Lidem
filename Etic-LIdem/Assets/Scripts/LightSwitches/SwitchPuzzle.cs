@@ -29,7 +29,7 @@ public class SwitchPuzzle : MonoBehaviour
         for (int i = 0; i < switchesScripts.Length; i++)
         {
          
-            switchesScripts[i].transform.localEulerAngles = new Vector3(0, 0, -0);
+            switchesScripts[i].transform.localEulerAngles = new Vector3(-60, 0, -0);
             switchesScripts[i].Moves = 0;
         }
     }

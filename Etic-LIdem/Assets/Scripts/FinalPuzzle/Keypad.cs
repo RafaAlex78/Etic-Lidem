@@ -13,6 +13,7 @@ public class Keypad : MonoBehaviour
     [SerializeField] private int[] inputs;
     [SerializeField] private TextMeshPro displayText;
     [SerializeField] private GameObject displayTextObject;
+    [SerializeField] private Animator doorAnimator;
     private bool complete;
 
     #region Startup/Setup
@@ -68,6 +69,7 @@ public class Keypad : MonoBehaviour
         if (solution == solutionCheck)
         {
             Deactivate();
+            doorAnimator.SetTrigger("Change");
             Debug.Log("Right Code");
         }
         else
