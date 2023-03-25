@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] lightsCorridor2;
     [SerializeField] private GameObject[] lightsCorridor3;
     [SerializeField] private tunel tunelScript;
+    [SerializeField] private GameObject map;
     [Header("Audio")]
     [SerializeField] private AudioSource doorAudioSource1;
     [SerializeField] private AudioSource doorAudioSource2;
@@ -38,6 +39,11 @@ public class GameManager : MonoBehaviour
         rb.constraints = RigidbodyConstraints.None;
         Debug.Log(rb);
 
+    }
+
+    public void DeParent(Transform item)
+    {
+        item.SetParent(map.transform);
     }
    
     public void ExitPlayRoom()

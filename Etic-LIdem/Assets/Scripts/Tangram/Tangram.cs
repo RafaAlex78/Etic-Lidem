@@ -8,6 +8,7 @@ public class Tangram : MonoBehaviour
 {
     [SerializeField] List<GameObject> _possiblePlaces;
    [SerializeField] int _numberObjectPlaced=0;
+    [SerializeField] private XRGrabInteractable _interactable;
 
     public void ADDPieces()
     {
@@ -39,7 +40,11 @@ public class Tangram : MonoBehaviour
             }
             if(rightPieces == _possiblePlaces.Count)
             {
-                Debug.Log("give Reward");
+                if (_interactable != null)
+                {
+
+                _interactable.enabled = true;
+                }
             }
             else
             {

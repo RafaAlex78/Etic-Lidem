@@ -5,6 +5,7 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     [SerializeField] private Transform rotation;
+    [SerializeField] private float angle;
     [SerializeField] private SwitchPuzzle switchPuzzle;
     [SerializeField] private int value;
     [SerializeField] private int _maxMoves;
@@ -27,6 +28,7 @@ public class Switch : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 90, 0);
         transform.position = StartPos;
+        angle = rotation.rotation.x;
         if (switchPuzzle.Complete)
         {
             this.GetComponent<BoxCollider>().enabled = false;
@@ -39,7 +41,7 @@ public class Switch : MonoBehaviour
             if (timer > 0.2f)
             {
                 timer = 0;
-                if (rotation.rotation.x < 0.15 && !isOn)
+                if (rotation.rotation.x < 0.18f && !isOn)
                 {
                     isOn = true;
                     Debug.Log(this.name + " on");
@@ -50,7 +52,7 @@ public class Switch : MonoBehaviour
                         switchPuzzle.ResetAllSwitch();
                     }
                 }
-                if (rotation.rotation.x > 0.35 && isOn)
+                if (rotation.rotation.x > 0.35f && isOn)
                 {
                     isOn = false;
                     Debug.Log(this.name + " off");
