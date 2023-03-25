@@ -568,7 +568,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &83058167
 PrefabInstance:
@@ -839,7 +839,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &158538863
 PrefabInstance:
@@ -992,7 +992,7 @@ Transform:
   - {fileID: 745149990}
   - {fileID: 1982750712}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &195712046
 PrefabInstance:
@@ -1684,6 +1684,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2e99751288c9d96428d4b252fe878b5e, type: 3}
   m_PrefabInstance: {fileID: 263704141}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &270293719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 270293721}
+  - component: {fileID: 270293720}
+  m_Layer: 0
+  m_Name: Control_Room_Note
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &270293720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270293719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 90298cc37f8f8164fb9eeebd33adcca3, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.8819511, y: 0.832872}
+  m_UVBias: {x: 0.027915992, y: 0.1132375}
+  m_ScaleMode: 1
+  m_Offset: {x: -0.04756674, y: 0.025779009, z: 0.28851312}
+  m_Size: {x: 1.1825943, y: 1.0515578, z: 0.17198181}
+  m_FadeFactor: 1
+--- !u!4 &270293721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270293719}
+  m_LocalRotation: {x: -0.23119043, y: 0.80053955, z: -0.45505047, w: -0.31403273}
+  m_LocalPosition: {x: -8.1708, y: -0.69750005, z: 6.4619007}
+  m_LocalScale: {x: 0.09000001, y: 0.09000001, z: 0.09000002}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1933187796}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 119.100006, y: 396.956, z: 170.012}
 --- !u!1001 &288674217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1750,6 +1805,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 00cd3a420b9da354eaa06be088142f59, type: 3}
   m_PrefabInstance: {fileID: 288674217}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &304443362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 304443364}
+  - component: {fileID: 304443363}
+  m_Layer: 0
+  m_Name: Infirmary_Arrow_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &304443363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304443362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: b088562ddfce7c042bcce4765d939de4, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_ScaleMode: 0
+  m_Offset: {x: -0.14525568, y: -0.10409427, z: 0}
+  m_Size: {x: 1.5680399, y: 0.7358861, z: 0.0043439865}
+  m_FadeFactor: 1
+--- !u!4 &304443364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304443362}
+  m_LocalRotation: {x: 0.6682635, y: -0.23113792, z: 0.668263, w: -0.23113596}
+  m_LocalPosition: {x: 5.978, y: 0.18599999, z: -0.76799965}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1933187796}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 218.159}
 --- !u!1001 &318128998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1867,7 +1977,7 @@ Transform:
   - {fileID: 911032483}
   - {fileID: 941923543}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &338156832
 PrefabInstance:
@@ -2337,7 +2447,7 @@ Transform:
   - {fileID: 217336510}
   - {fileID: 871092048}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &406157657
 PrefabInstance:
@@ -2537,6 +2647,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 62124bbf9c8b0b74ab41e38517d235e4, type: 3}
   m_PrefabInstance: {fileID: 436968616}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &468253059
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 2c7a1f5341e977a418fdd36022540d1c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c7a1f5341e977a418fdd36022540d1c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.03138107
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c7a1f5341e977a418fdd36022540d1c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.013
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c7a1f5341e977a418fdd36022540d1c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.788
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c7a1f5341e977a418fdd36022540d1c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071079
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c7a1f5341e977a418fdd36022540d1c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c7a1f5341e977a418fdd36022540d1c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071057
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c7a1f5341e977a418fdd36022540d1c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c7a1f5341e977a418fdd36022540d1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c7a1f5341e977a418fdd36022540d1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c7a1f5341e977a418fdd36022540d1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c7a1f5341e977a418fdd36022540d1c, type: 3}
+      propertyPath: m_Name
+      value: Infirmary_Number_PadLock
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2c7a1f5341e977a418fdd36022540d1c, type: 3}
 --- !u!1001 &557807296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2755,6 +2922,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e0b1c22bfaf1c8d4d993b4bf29ade310, type: 3}
   m_PrefabInstance: {fileID: 571878068}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &591902322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 591902324}
+  - component: {fileID: 591902323}
+  m_Layer: 0
+  m_Name: Infirmary_Arrow_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &591902323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591902322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: b088562ddfce7c042bcce4765d939de4, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_ScaleMode: 0
+  m_Offset: {x: -0.14525568, y: -0.10409427, z: -0.08734955}
+  m_Size: {x: 1.5680399, y: 0.7358861, z: 0.76099813}
+  m_FadeFactor: 1
+--- !u!4 &591902324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591902322}
+  m_LocalRotation: {x: 0.5348976, y: -0.35714784, z: 0.20075093, w: -0.7389378}
+  m_LocalPosition: {x: 5.962, y: 1.2879999, z: 1.5740004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1933187796}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -40.325, y: 76.911, z: 297.089}
 --- !u!1001 &612181857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3668,7 +3890,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &793222514
 PrefabInstance:
@@ -3872,6 +4094,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7d3a6dd1a84a0fe488894a7244c1601b, type: 3}
   m_PrefabInstance: {fileID: 871092047}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &900296737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 900296739}
+  - component: {fileID: 900296738}
+  m_Layer: 0
+  m_Name: Playroom_Sign
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &900296738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900296737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 6ef17763e7c9171458590277c80d8f14, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 0.027010413}
+  m_Size: {x: 1, y: 1, z: 0.054020826}
+  m_FadeFactor: 1
+--- !u!4 &900296739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900296737}
+  m_LocalRotation: {x: 0.0000014603136, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.101, y: -0.53800005, z: -7.012}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1933187796}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &911032482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6149,8 +6426,63 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1444242086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1444242088}
+  - component: {fileID: 1444242087}
+  m_Layer: 0
+  m_Name: Infirmary_Arrow_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1444242087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444242086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: b088562ddfce7c042bcce4765d939de4, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_ScaleMode: 0
+  m_Offset: {x: 0.08008444, y: -0.006381154, z: 0.35434788}
+  m_Size: {x: 1.2775285, y: 0.7176986, z: 0.0043439865}
+  m_FadeFactor: 1
+--- !u!4 &1444242088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444242086}
+  m_LocalRotation: {x: 0.67985797, y: -0.1943977, z: 0.19439678, w: 0.6798622}
+  m_LocalPosition: {x: 4.25, y: -1.174, z: 0.083999634}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1933187796}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 31.914}
 --- !u!1001 &1444362395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7232,7 +7564,7 @@ Transform:
   - {fileID: 557807297}
   - {fileID: 2038749031}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1714186994
 PrefabInstance:
@@ -7944,6 +8276,116 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 628a1a0f9c8c9cf4fa4a2dd35fe78dbf, type: 3}
   m_PrefabInstance: {fileID: 1870361429}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1874913118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1874913120}
+  - component: {fileID: 1874913119}
+  m_Layer: 0
+  m_Name: Infirmary_JL?
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1874913119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874913118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 700662e27d36bc644a475028c03b39a1, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_ScaleMode: 0
+  m_Offset: {x: 0.02181299, y: -0.04377693, z: 0}
+  m_Size: {x: 0.65626895, y: 0.54479206, z: 0.0043439865}
+  m_FadeFactor: 1
+--- !u!4 &1874913120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874913118}
+  m_LocalRotation: {x: -0, y: 0.7071099, z: -0, w: -0.7071037}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1933187796}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 269.999, z: 0}
+--- !u!1 &1893089934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893089936}
+  - component: {fileID: 1893089935}
+  m_Layer: 0
+  m_Name: Infirmary_JoseLuis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1893089935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893089934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 4489268bbc4dd8d4eb26c44374d09d2f, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_ScaleMode: 0
+  m_Offset: {x: -0.052556753, y: -0.4127061, z: 0.35434788}
+  m_Size: {x: 1.8605714, y: 1.5303488, z: 0.0043439865}
+  m_FadeFactor: 1
+--- !u!4 &1893089936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893089934}
+  m_LocalRotation: {x: 0.0000029504295, y: 1, z: 0.0000014638449, w: 4.1922017e-12}
+  m_LocalPosition: {x: 4.172, y: 0.58599997, z: -1.4490004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1933187796}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: -180}
 --- !u!1001 &1895429955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8208,6 +8650,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a60925556ff6cf3479edaa3483100d18, type: 3}
   m_PrefabInstance: {fileID: 1930478228}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1933187795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1933187796}
+  m_Layer: 0
+  m_Name: Decals_test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1933187796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933187795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.02, y: 1.529, z: 9.962}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 900296739}
+  - {fileID: 270293721}
+  - {fileID: 1893089936}
+  - {fileID: 1444242088}
+  - {fileID: 304443364}
+  - {fileID: 591902324}
+  - {fileID: 1874913120}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1948735471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8557,7 +9037,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1967427707
 PrefabInstance:
