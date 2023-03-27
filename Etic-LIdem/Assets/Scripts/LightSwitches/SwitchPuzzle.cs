@@ -11,8 +11,12 @@ public class SwitchPuzzle : MonoBehaviour
     [SerializeField] private bool[] solution;
     [SerializeField] private GameObject[] lights;
     [SerializeField] private GameObject emergencyLight;
+    [SerializeField] private GameManager gameManager;
     public bool Complete { get => complete; }
-
+    private void Start()
+    {
+        gameManager = GameManager.instance;
+    }
     public void SwitchOn(int value)
     {
         switches[value] = true;
@@ -54,6 +58,7 @@ public class SwitchPuzzle : MonoBehaviour
             
         }
         //ligar a luz
+        gameManager.Audios[6].PlayOneShot(gameManager.Audios[6].clip);
         emergencyLight.SetActive(false);
         complete = true;
     }
