@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Right Hand
   - Left Hand
-  - Pills
   - Key
   - DrawerKey
   - Elevator
@@ -14,6 +13,8 @@ TagManager:
   - FinalKey2
   - FinalKey3
   - Toy
+  - StraightPills
+  - RoundPills
   layers:
   - Default
   - TransparentFX

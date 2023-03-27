@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] lightsCorridor1;
     [SerializeField] private GameObject[] lightsCorridor2;
     [SerializeField] private GameObject[] lightsCorridor3;
+    [SerializeField] private tunel tunelScript;
+    [SerializeField] private GameObject map;
     [Header("Audio")]
     [SerializeField] private AudioSource ambientAudio;
     [SerializeField] private AudioSource musicAudio;
@@ -70,6 +72,11 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void DeParent(Transform item)
+    {
+        item.SetParent(map.transform);
+    }
+   
     public void ExitPlayRoom()
     {
         Audios[0].PlayOneShot(Audios[0].clip);

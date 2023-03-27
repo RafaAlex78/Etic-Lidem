@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class TrayScript : MonoBehaviour
 {
-    [SerializeField] int _currentPills;
-    [SerializeField] int _neededPills;
+    [SerializeField] int _currentRoundPills;
+    [SerializeField] int _currentStraightPills;
+    [SerializeField] int _neededRoundPills;
+    [SerializeField] int _neededStraightPills;
     [SerializeField] private GameObject[] toGive;
 
     private void CheckPills()
     {
-        if(_currentPills==_neededPills)
+        if(_currentRoundPills>=_neededRoundPills &&_currentStraightPills>= _neededStraightPills)
         {
             for (int i = 0; i < toGive.Length; i++)
             {
@@ -20,10 +22,16 @@ public class TrayScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Pills"))
+        if(other.CompareTag("StraightPills"))
         {
             Debug.Log("+1");
-            _currentPills++;
+            _currentStraightPills++;
+            CheckPills();
+        }
+        if(other.CompareTag("RoundPills"))
+        {
+            Debug.Log("+1");
+            _currentRoundPills++;
             CheckPills();
         }
     }
