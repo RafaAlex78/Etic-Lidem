@@ -15,10 +15,12 @@ public class Keypad : MonoBehaviour
     [SerializeField] private GameObject displayTextObject;
     [SerializeField] private Animator doorAnimator;
     private bool complete;
+    [SerializeField] private GameManager _gameManager;
 
     #region Startup/Setup
     private void Start()
     {
+        _gameManager = GameManager.instance;
         complete = true;
     }
 
@@ -28,6 +30,8 @@ public class Keypad : MonoBehaviour
         if (displayTextObject.activeInHierarchy != true)
         {
             displayTextObject.SetActive(true);
+            //10- PadLock AfirmationSound
+            _gameManager.Audios[10].PlayOneShot(_gameManager.Audios[10].clip);
         }
         Debug.Log("ativo");
     }
@@ -70,6 +74,10 @@ public class Keypad : MonoBehaviour
         {
             Deactivate();
             doorAnimator.SetTrigger("Change");
+            //PadLock AfirmationSound
+            _gameManager.Audios[10].PlayOneShot(_gameManager.Audios[10].clip);
+            //2ºDoorSlow Opening
+            _gameManager.Audios[4].PlayOneShot(_gameManager.Audios[4].clip);
             Debug.Log("Right Code");
         }
         else
@@ -79,6 +87,8 @@ public class Keypad : MonoBehaviour
                 inputs[i] = 0;
             }
             solutionCheck = inputs[2].ToString() + inputs[1].ToString() + inputs[0].ToString();
+            //Pad Lock NegationSound
+            _gameManager.Audios[11].PlayOneShot(_gameManager.Audios[11].clip);
             DisplayText();
         }
     }
