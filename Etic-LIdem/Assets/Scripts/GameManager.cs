@@ -26,8 +26,16 @@ public class GameManager : MonoBehaviour
     // 5- Second door slam
     // 6- Third Lights On inside Infamari
     // 7- Elavator sound
+    // 8- Key on the drawer lock 
+    // 9- Key on keyLock
+    //10- PadLock AfirmationSound
+    //11- PadLock NegationSound
+    //12- PadLock Button push
+    //13- sounds of things falling
+    //14- third Door Slow opening
     [SerializeField] private AudioSource[] randomEffectsAudios;
         float lastPlayedTime = 0, minTimeBetweenSounds = 25f;
+    int _index2 = 1;
 
 
     //teste Dps Apagar
@@ -35,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     public AudioSource[] Audios { get => effectsAudios; set => effectsAudios = value; }
 
-    //teste Dps Apagar
+    
     private void Update()
     {
         if(plushyHandsOnMyHands == true)
@@ -43,11 +51,11 @@ public class GameManager : MonoBehaviour
             StartCoroutine(LightSequence1());
             plushyHandsOnMyHands = false;
         }
-        if(ambientAudio.volume <= 0.2)
+        if(musicAudio.volume <= 0.2)
         {
-            ambientAudio.volume += 0.0001f;
+            musicAudio.volume += 0.0001f;
         }
-        Debug.Log("<color=red> o :" + lastPlayedTime + minTimeBetweenSounds);
+       
 
     }
     private void Awake()
@@ -144,11 +152,14 @@ public class GameManager : MonoBehaviour
         Debug.Log(Time.time);
         if (Time.time > lastPlayedTime + minTimeBetweenSounds)
         {
-
-        int index = Random.Range(0,randomEffectsAudios.Length);
-        randomEffectsAudios[index].PlayOneShot(randomEffectsAudios[index].clip);
-         lastPlayedTime = Time.time;
-           
+            
+            int index = Random.Range(0,randomEffectsAudios.Length);
+            if(index != _index2)
+            {
+                randomEffectsAudios[index].PlayOneShot(randomEffectsAudios[index].clip);
+                lastPlayedTime = Time.time;
+                index = _index2;
+            }
             
         }
         Invoke("PlayRandomSound", Random.Range(5f, 10f));

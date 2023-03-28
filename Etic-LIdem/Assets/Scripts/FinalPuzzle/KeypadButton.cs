@@ -12,9 +12,11 @@ public class KeypadButton : MonoBehaviour
     [SerializeField] private Vector3 startingPos;
     [SerializeField] private Vector3 pos;
     [SerializeField] private float posOffSetLimit;
+    [SerializeField] private GameManager _gameManager;
 
     private void Start()
     {
+        _gameManager = GameManager.instance;
         startingPos = this.transform.position;
     }
 
@@ -25,6 +27,7 @@ public class KeypadButton : MonoBehaviour
         {
             keypad.InputValue(number);
             pressed = true;
+            _gameManager.Audios[12].PlayOneShot(_gameManager.Audios[12].clip);
         }
         if (Mathf.Abs(pos.x - startingPos.x) < posOffSetLimit)
         {

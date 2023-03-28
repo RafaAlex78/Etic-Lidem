@@ -8,9 +8,11 @@ public class UnlockDrawer : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject key;
+    [SerializeField] private GameManager _gameManager;
 
     private void Start()
     {
+        _gameManager = GameManager.instance;
         rb = this.GetComponent<Rigidbody>();
     }
 
@@ -20,6 +22,7 @@ public class UnlockDrawer : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.None;
             key.SetActive(true);
+            _gameManager.Audios[8].PlayOneShot(_gameManager.Audios[8].clip);
             other.gameObject.SetActive(false);
         }
     }

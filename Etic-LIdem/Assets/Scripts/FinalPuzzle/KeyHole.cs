@@ -6,7 +6,12 @@ public class KeyHole : MonoBehaviour
 {
     [SerializeField] private GameObject[] key;
     [SerializeField] private FinalPuzzle final;
+    [SerializeField] private GameManager _gameManager;
 
+    private void Start()
+    {
+        _gameManager = GameManager.instance;
+    }
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Colided");
@@ -16,7 +21,7 @@ public class KeyHole : MonoBehaviour
             {
                 other.gameObject.SetActive(false);
                 key[0].SetActive(true);
-
+                _gameManager.Audios[9].PlayOneShot(_gameManager.Audios[9].clip);
                 AddKey();
             }
         }
@@ -26,7 +31,7 @@ public class KeyHole : MonoBehaviour
             {
                 other.gameObject.SetActive(false);
                 key[1].SetActive(true);
-
+                _gameManager.Audios[9].PlayOneShot(_gameManager.Audios[9].clip);
                 AddKey();
             }
         }
@@ -36,7 +41,7 @@ public class KeyHole : MonoBehaviour
             {
                 other.gameObject.SetActive(false);
                 key[2].SetActive(true);
-
+                _gameManager.Audios[9].PlayOneShot(_gameManager.Audios[9].clip);
                 AddKey();
             }
         }
@@ -46,6 +51,7 @@ public class KeyHole : MonoBehaviour
     {
         if (final != null)
         {
+            
             final.InsertKey();
         }
     }
