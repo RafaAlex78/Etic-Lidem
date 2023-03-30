@@ -140,8 +140,8 @@ Material:
     - _P_Invert_Metallic: 0
     - _P_Invert_Roughness: 0
     - _P_Normal_Intensity: 1
-    - _P_Roughness_Intensity: 0.78
-    - _P_Roughness_Levels: 1.45
+    - _P_Roughness_Intensity: 0.71
+    - _P_Roughness_Levels: 1.54
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0

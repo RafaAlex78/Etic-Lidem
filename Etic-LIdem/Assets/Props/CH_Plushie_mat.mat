@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7620004219019457897
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 5
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -20,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Infirmary_JL
-  m_Shader: {fileID: -6465566751694194690, guid: ed42f54518fbcb949954936cff91aefb, type: 3}
+  m_Name: CH_Plushie_mat
+  m_Shader: {fileID: -6465566751694194690, guid: 6c2f2646f915fac4a8f7e40618e1fb5d, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -33,24 +20,24 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Atlas_Map_Diffuse:
+        m_Texture: {fileID: 2800000, guid: a34755b4126ae334e92c281701e51173, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Atlas_Map_Normal:
+        m_Texture: {fileID: 2800000, guid: a35fd76941c9b9a41af5962a0fe5a755, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Atlas_Map_ORM:
+        m_Texture: {fileID: 2800000, guid: ebc640c21f25fde40aac8fe144026f3b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _D_Atlas_Map_Diffuse:
-        m_Texture: {fileID: 2800000, guid: fd871f638c8d06b43b0fcdf40482f5ba, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _D_Atlas_Map_Normal:
-        m_Texture: {fileID: 2800000, guid: 4597dea9dc6d6cd44a6307edeca04859, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _D_Atlas_Map_ORM:
-        m_Texture: {fileID: 2800000, guid: 09ce65ea3add70b4c9ed00529a7e0b19, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -81,8 +68,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _P_Atlas_Map_Diffuse:
+        m_Texture: {fileID: 2800000, guid: a34755b4126ae334e92c281701e51173, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _P_Atlas_Map_Normal:
+        m_Texture: {fileID: 2800000, guid: a35fd76941c9b9a41af5962a0fe5a755, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _P_Atlas_Map_ORM:
+        m_Texture: {fileID: 2800000, guid: ebc640c21f25fde40aac8fe144026f3b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_02f43d767d304b56877798b79cb84408_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 9c62cf2d4bf02214389257451b4c7972, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -103,6 +106,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Activate_Emission: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -110,37 +114,40 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _D_Activate_Emission: 1
-    - _D_Choose_Decal_1_9: 8
-    - _D_DIffuse_Saturation: 1
-    - _D_Diffuse_Contrast: 1
-    - _D_Diffuse_Hue: 1
-    - _D_Diffuse_Intensity: 1
-    - _D_Emission_Intensity: 1.18
-    - _D_Invert_Metallic: 0
-    - _D_Invert_Roughness: 0
-    - _D_Normal_Intensity: 0
-    - _D_Opacity_Intensity: 1
-    - _D_Roughness_Intensity: 1
-    - _D_Roughness_Levels: 1
-    - _DecalAngleFadeSupported: 1
-    - _DecalMeshBiasType: 0
-    - _DecalMeshDepthBias: 0
-    - _DecalMeshViewBias: 0
+    - _DIffuse_Saturation: 1
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DrawOrder: 0
+    - _Diffuse_Contrast: 1
+    - _Diffuse_Hue: 1
+    - _Diffuse_Intensity: 3.75
     - _DstBlend: 0
+    - _Emission_Intensity: 1
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _Invert_Metallic: 0
+    - _Invert_Roughness: 0
     - _Metallic: 0
+    - _Normal_Intensity: -3
     - _OcclusionStrength: 1
-    - _Opacity_Levels: 2.67
+    - _P_Activate_Emission: 0
+    - _P_DIffuse_Saturation: 0.76
+    - _P_Diffuse_Contrast: 1.02
+    - _P_Diffuse_Hue: 1
+    - _P_Diffuse_Intensity: 1.5
+    - _P_Emission_Intensity: 1
+    - _P_Invert_Metallic: 0
+    - _P_Invert_Roughness: 0
+    - _P_Normal_Intensity: -1
+    - _P_Roughness_Intensity: 0.64
+    - _P_Roughness_Levels: 1.55
     - _Parallax: 0.005
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _Roughness_Intensity: 0.64
+    - _Roughness_Levels: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -151,7 +158,21 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _D_Emission_Color: {r: 0.095674604, g: 0.8113208, b: 0.49877483, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Emission_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _P_Emission_Color: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
+--- !u!114 &3765825385137233664
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
