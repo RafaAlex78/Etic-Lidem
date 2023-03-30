@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CH_Plushie_mat
+  m_Name: CH_Plushie_mat_Emissive
   m_Shader: {fileID: -6465566751694194690, guid: 6c2f2646f915fac4a8f7e40618e1fb5d, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -131,12 +131,12 @@ Material:
     - _Metallic: 0
     - _Normal_Intensity: -3
     - _OcclusionStrength: 1
-    - _P_Activate_Emission: 0
+    - _P_Activate_Emission: 1
     - _P_DIffuse_Saturation: 0.76
     - _P_Diffuse_Contrast: 1.02
     - _P_Diffuse_Hue: 1
     - _P_Diffuse_Intensity: 1.5
-    - _P_Emission_Intensity: 0.004
+    - _P_Emission_Intensity: 0.005
     - _P_Invert_Metallic: 0
     - _P_Invert_Roughness: 0
     - _P_Normal_Intensity: -1

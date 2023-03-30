@@ -61,5 +61,6 @@ public class SwitchPuzzle : MonoBehaviour
         gameManager.Audios[6].PlayOneShot(gameManager.Audios[6].clip);
         emergencyLight.SetActive(false);
         complete = true;
+        gameManager.SearchForPlushie();
     }
 }

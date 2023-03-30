@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource ambientAudio;
     [SerializeField] private AudioSource musicAudio;
+    [SerializeField] private AudioSource[] randomEffectsAudios;
     [SerializeField] private AudioSource[] effectsAudios;
     // 0- firts Door slow opening
     // 1- firt lights Turnig on
@@ -33,30 +34,54 @@ public class GameManager : MonoBehaviour
     //12- PadLock Button push
     //13- sounds of things falling
     //14- third Door Slow opening
-    [SerializeField] private AudioSource[] randomEffectsAudios;
-        float lastPlayedTime = 0, minTimeBetweenSounds = 25f;
+    [Header("Plushie")]
+    [SerializeField] private Plushie plushie;
+    [SerializeField] private AudioSource plushieAudio;
+    [SerializeField] private AudioClip[] plushieClips;
+    [SerializeField] private GameObject plushieFinder;
+    // 0 - Behind
+    // 1 - Come back
+    // 2 - Come on (emotionless)
+    // 3 - Come on
+    // 4 - Dont be scared
+    // 5 - Dont go
+    // 6 - dont leave me
+    // 7 - dont look
+    // 8 - dont peak
+    // 9 - Farewell
+    // 10 - GoodBye
+    // 11 - Hurry (scuffed)
+    // 12 - im here
+    // 13 - im over here (strange)
+    // 14 - just a little more
+    // 15 - look at the walls
+    // 16 - look
+    // 17 - my old friend
+    // 18 - my... arm
+    // 19 - over there
+    // 20 - please help me
+    // 21 - please help
+    // 22 - Quick Quick
+    // 23 - Quick
+    // 24 - Thank you
+    // 25 - The FlashLight
+    // 26 - The Light
+    // 27 - The Walls
+    // 28 - This way
+    // 29 - You forgot about me
+
+    float lastPlayedTime = 0, minTimeBetweenSounds = 25f;
     int _index2 = 1;
-
-
-    //teste Dps Apagar
-    [SerializeField] bool plushyHandsOnMyHands = false;
 
     public AudioSource[] Audios { get => effectsAudios; set => effectsAudios = value; }
 
     
     private void Update()
     {
-        if(plushyHandsOnMyHands == true)
-        {
-            StartCoroutine(LightSequence1());
-            plushyHandsOnMyHands = false;
-        }
         if(musicAudio.volume <= 0.2)
         {
             musicAudio.volume += 0.0001f;
         }
-       
-
     }
     private void Awake()
     {
@@ -66,7 +91,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            DontDestroyOnLoad(this.gameObject);
             instance = this;
         }
         Invoke("PlayRandomSound", Random.Range(5f, 10f));
@@ -77,7 +101,6 @@ public class GameManager : MonoBehaviour
         // Possivel solução poster
         rb.constraints = RigidbodyConstraints.None;
         Debug.Log(rb);
-
     }
 
     public void DeParent(Transform item)
@@ -89,16 +112,18 @@ public class GameManager : MonoBehaviour
     {
         Audios[0].PlayOneShot(Audios[0].clip);
         playroomAnim.SetTrigger("Change");
+        PickedPlushie();
         //play Door Opnening Slow
     }
 
-    public void PickedPlushiePart()
+    public void PickedPlushie()
     {
         StartCoroutine(LightSequence1());
     }
 
     IEnumerator LightSequence1()
     {
+        yield return new WaitForSeconds(4f);
         yield return new WaitForSeconds(1.5f);
         //first lights turning on
         Audios[1].PlayOneShot(Audios[1].clip);
@@ -115,6 +140,14 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LightSequence2()
     {
+        //my...arm
+        plushieAudio.clip = plushieClips[18];
+        plushieAudio.Play();
+        yield return new WaitForSeconds(3);
+        //thank you
+        plushieAudio.clip = plushieClips[24];
+        plushieAudio.Play();
+        yield return new WaitForSeconds(1);
         yield return new WaitForSeconds(2);
         //first lights off audio
         Audios[2].PlayOneShot(Audios[2].clip);
@@ -122,6 +155,7 @@ public class GameManager : MonoBehaviour
         {
             lightsCorridor2[i].SetActive(false);
         }
+        plushie.Disappear();
         yield return new WaitForSeconds(1);
         //second lights On
         Audios[3].PlayOneShot(Audios[3].clip);
@@ -135,8 +169,6 @@ public class GameManager : MonoBehaviour
         Audios[4].PlayOneShot(Audios[4].clip);
         infirmaryAnim.SetTrigger("Change");
     }
-
-
 
     //Do we trigger the door closing after the player turns on the lights or after they enter the infirmary?
     public void EnteredInfirmary()
@@ -163,6 +195,54 @@ public class GameManager : MonoBehaviour
             
         }
         Invoke("PlayRandomSound", Random.Range(5f, 10f));
-
     }
+
+    #region Plushie
+     
+    public void FarFromPlushie()
+    {
+        int[] faraway = { 1, 6, 12, 20, 21, 29 };
+        int random = Random.Range(0, faraway.Length-1);
+        plushieAudio.clip = plushieClips[faraway[random]];
+        plushieAudio.Play();
+    }
+
+    public void PlushieDisappeared()
+    {
+        StartCoroutine(PDisappeared());
+    }
+    IEnumerator PDisappeared()
+    {
+        yield return new WaitForSeconds(1.5f);
+        //This way
+        plushieAudio.clip = plushieClips[28];
+        plushieAudio.Play();
+    }
+
+    public void SearchForPlushie()
+    {
+        StartCoroutine(SearchForPlushieCor());
+    }
+
+    IEnumerator SearchForPlushieCor()
+    {
+        plushieFinder.SetActive(true);
+        yield return new WaitForSeconds(6);
+        plushieFinder.SetActive(false);
+    }
+
+    public void PlushieFound(bool value)
+    {
+        if (value)
+        {
+            //you forgot about me
+            plushieAudio.clip = plushieClips[29];
+            plushieAudio.Play();
+        }
+        else
+        {
+            plushie.FoundPlushie();
+        }
+    }
+    #endregion
 }
