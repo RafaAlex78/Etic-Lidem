@@ -13,7 +13,7 @@ public class RepairPlushie : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Toy"))
+        if (other.gameObject.CompareTag("PlushieArm"))
         {
             plushieArms.SetActive(true);
             other.gameObject.SetActive(false);

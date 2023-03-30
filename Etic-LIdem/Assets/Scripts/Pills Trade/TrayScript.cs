@@ -10,7 +10,7 @@ public class TrayScript : MonoBehaviour
     [SerializeField] int _neededStraightPills;
     [SerializeField] private GameObject[] toGive;
     [SerializeField] private GameManager _gameManager;
-
+    [SerializeField] private Animator anim;
     private void Start()
     {
         _gameManager = GameManager.instance;
@@ -22,7 +22,7 @@ public class TrayScript : MonoBehaviour
             for (int i = 0; i < toGive.Length; i++)
             {
                 toGive[i].SetActive(true);
-                
+                anim.SetTrigger("Close");
             }
             //faze som de objectos a cair
             _gameManager.Audios[13].PlayOneShot(_gameManager.Audios[13].clip);
