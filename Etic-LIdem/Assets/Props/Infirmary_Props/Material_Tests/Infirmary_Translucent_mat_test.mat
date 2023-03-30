@@ -121,7 +121,7 @@ Material:
     - _T_Diffuse_Intensity: 1.03
     - _T_Invert_Roughness: 0
     - _T_Normal_Intensity: 1
-    - _T_Opacity_Intensity: 2.22
+    - _T_Opacity_Intensity: 3.82
     - _T_Roughness_Intensity: 0.2
     - _T_Roughness_Levels: 1
     - _WorkflowMode: 1

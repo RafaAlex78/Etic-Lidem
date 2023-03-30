@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Infirmary_JL
+  m_Name: Infirmary_Crack_01
   m_Shader: {fileID: -6465566751694194690, guid: ed42f54518fbcb949954936cff91aefb, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -42,15 +42,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _D_Atlas_Map_Diffuse:
-        m_Texture: {fileID: 2800000, guid: fd871f638c8d06b43b0fcdf40482f5ba, type: 3}
+        m_Texture: {fileID: 2800000, guid: 095828e088b5acd40ba52d012363cd5f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _D_Atlas_Map_Normal:
-        m_Texture: {fileID: 2800000, guid: 4597dea9dc6d6cd44a6307edeca04859, type: 3}
+        m_Texture: {fileID: 2800000, guid: 239fdf3fd2239be44afd7dc480d1c3dc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _D_Atlas_Map_ORM:
-        m_Texture: {fileID: 2800000, guid: 09ce65ea3add70b4c9ed00529a7e0b19, type: 3}
+        m_Texture: {fileID: 2800000, guid: 785a651aaab132d49b009c646400af8d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -110,13 +110,13 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _D_Activate_Emission: 1
-    - _D_Choose_Decal_1_9: 8
-    - _D_DIffuse_Saturation: 1
-    - _D_Diffuse_Contrast: 1
+    - _D_Activate_Emission: 0
+    - _D_Choose_Decal_1_9: 2
+    - _D_DIffuse_Saturation: 0.44
+    - _D_Diffuse_Contrast: 0.71
     - _D_Diffuse_Hue: 1
-    - _D_Diffuse_Intensity: 1
-    - _D_Emission_Intensity: 1.18
+    - _D_Diffuse_Intensity: 1.87
+    - _D_Emission_Intensity: 1
     - _D_Invert_Metallic: 0
     - _D_Invert_Roughness: 0
     - _D_Normal_Intensity: 0
@@ -137,7 +137,7 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _Opacity_Levels: 2.67
+    - _Opacity_Levels: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -151,7 +151,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _D_Emission_Color: {r: 0.095674604, g: 0.8113208, b: 0.49877483, a: 0}
+    - _D_Emission_Color: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
