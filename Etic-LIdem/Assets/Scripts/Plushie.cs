@@ -17,6 +17,8 @@ public class Plushie : MonoBehaviour
     XRGrabInteractable interactable;
     bool tryToDisappear;
 
+    public bool TryToDisappear { get => tryToDisappear; set => tryToDisappear = value; }
+
     private void Start()
     {
         render = GetComponent<Renderer>();
@@ -27,25 +29,31 @@ public class Plushie : MonoBehaviour
 
     private void Update()
     {
-        Vector3 distance = player.transform.position - transform.position;
-        if (Mathf.Abs(distance.x) >= 6 || Mathf.Abs(distance.z) >= 6)
-        {
-            timer += Time.deltaTime;
-            if (timer >= 7)
-            {
-                timer = 0;
-                gameManager.FarFromPlushie();
-            }
-        }
 
         if (tryToDisappear)
         {
             if (!render.isVisible)
             {
-                tryToDisappear = false;
                 CouldDisappear();
+                tryToDisappear = false;
             }
         }
+
+
+        Vector3 distance = player.transform.position - transform.position;
+        if (Mathf.Abs(distance.x) >= 6 || Mathf.Abs(distance.z) >= 6)
+        {
+            if (checkIfFar)
+            {
+                timer += Time.deltaTime;
+                if (timer >= 7)
+                {
+                    timer = 0;
+                    gameManager.FarFromPlushie();
+                }
+            }
+        }
+
     }
     public void Disappear()
     {

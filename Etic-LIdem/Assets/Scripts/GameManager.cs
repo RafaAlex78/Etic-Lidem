@@ -148,6 +148,7 @@ public class GameManager : MonoBehaviour
         plushieAudio.clip = plushieClips[24];
         plushieAudio.Play();
         yield return new WaitForSeconds(1);
+        plushie.TryToDisappear = true;
         yield return new WaitForSeconds(2);
         //first lights off audio
         Audios[2].PlayOneShot(Audios[2].clip);
@@ -227,7 +228,7 @@ public class GameManager : MonoBehaviour
     IEnumerator SearchForPlushieCor()
     {
         plushieFinder.SetActive(true);
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(0.4f);
         plushieFinder.SetActive(false);
     }
 
