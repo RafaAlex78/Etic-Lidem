@@ -6286,7 +6286,7 @@
         "affectsNormalBlend": true,
         "affectsNormal": true,
         "affectsMAOS": true,
-        "affectsEmission": false,
+        "affectsEmission": true,
         "drawOrder": 0,
         "supportLodCrossFade": false,
         "angleFade": false
