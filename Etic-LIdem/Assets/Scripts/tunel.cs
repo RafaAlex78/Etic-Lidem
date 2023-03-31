@@ -24,30 +24,6 @@ public class tunel : MonoBehaviour
     //    _mapToScale.transform.position = _bigRoomPos;
     }
 
-    private void Update()
-    {
-        if (test)
-        {
-            _mapToScale.transform.localScale = _smallRoomScale;
-            _mapToScale.transform.position = _smallRoomPos;
-            for (int i = 0; i < BigRoom.Length; i++)
-            {
-                BigRoom[i].SetActive(true);
-                SmallRoom[i].SetActive(false);
-            }
-
-        }
-        else
-        {
-            _mapToScale.transform.localScale = _bigRoomScale;
-            _mapToScale.transform.position = _bigRoomPos;
-            for (int i = 0; i < SmallRoom.Length; i++)
-            {
-                SmallRoom[i].SetActive(true);
-                BigRoom[i].SetActive(false);
-            }
-        }
-    }
     public void ChangeRoom(bool isInBigRoom)
     {
         if (isInBigRoom)

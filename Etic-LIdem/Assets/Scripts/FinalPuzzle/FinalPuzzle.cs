@@ -6,7 +6,7 @@ using UnityEngine;
 public class FinalPuzzle : MonoBehaviour
 {
     [SerializeField] private int keys;
-    [SerializeField] private Keypad keypad;
+    [SerializeField] private Keypad[] keypad;
 
     public void InsertKey()
     {
@@ -20,7 +20,10 @@ public class FinalPuzzle : MonoBehaviour
         if (keys >= 3)
         {
             Debug.Log("all keys in place");
-            keypad.Activate();
+            for (int i = 0; i < keypad.Length; i++)
+            {
+                keypad[i].Activate();
+            }
         }
     }
 }

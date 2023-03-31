@@ -5,12 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/PlayTest.unity
-    guid: a387f9dc7550689438635f66d2104c8e
   - enabled: 1
-    path: Assets/Scenes/Esteve Demo.unity
-    guid: b4178db0eb82f33418de0b308d490674
+    path: Assets/Scenes/MainMenu.unity
+    guid: fd1f91c6d219666459556e53f4851d2c
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: 002d23793ae457449bdccd623eb3a149
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 89ad65ac857c87e4db6ea4c63d6a47a9, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9104e2a36b781c445a59d5f3c8bfa63a, type: 2}

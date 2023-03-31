@@ -6,7 +6,7 @@ public class CastUVMask : MonoBehaviour
 {
     [SerializeField] private GameObject _cast;
     [SerializeField] private LayerMask _layerMask;
-    [SerializeField]Vector3 _distance;
+    [SerializeField] Vector3 _distance;
 
     private void Update()
     {
