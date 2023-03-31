@@ -12,6 +12,7 @@ public class SwitchPuzzle : MonoBehaviour
     [SerializeField] private GameObject[] lights;
     [SerializeField] private GameObject emergencyLight;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private GameObject[] wallsDecal;
     public bool Complete { get => complete; }
     private void Start()
     {
@@ -62,5 +63,9 @@ public class SwitchPuzzle : MonoBehaviour
         emergencyLight.SetActive(false);
         complete = true;
         gameManager.SearchForPlushie();
+        for (int i = 0; i < wallsDecal.Length; i++)
+        {
+            wallsDecal[i].SetActive(false);
+        }
     }
 }
